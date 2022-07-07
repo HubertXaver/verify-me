@@ -1,7 +1,7 @@
 <template>
     <section class="index container">
         <header class="index__header p-20 pb-100">
-            <h1 class="medium">Intellectual DAO</h1>
+            <h1 class="medium">Verify-Me</h1>
             <p class="primaryc pb-30 pt-10">Intellectual property management ecosystem in 3 easy steps</p>
             <em
                 >We know that artists and authors usually want to focus on the actual craft or research, so we empower all kinds of creators to concetrate on their creative processes and let the smart
@@ -13,7 +13,7 @@
             <input @change="fileInput" type="file" />
         </div>
         <div class="index__submit p-20 pb-100">
-            <h2>2 Create Intellectual Property Signatures</h2>
+            <h2>2 Create Verify-Me Property Signatures</h2>
             <form class="d-flex-col px-40 pt-60" @submit.prevent="createIP({ hash, name, symbol })">
                 <input placeholder="Enter the name of your IP, ex: “unicorn drawing”" required class="mb-33" v-model="name" type="text" />
                 <input placeholder="Enter a symbol, ex: “s2!”" required class="mb-24" v-model="symbol" type="text" />
@@ -48,7 +48,7 @@ export default {
     },
     methods: {
         test(file, response) {
-            console.log(file, response)
+            console.log(file, response);
         },
         async connect() {
             const web3auth = this.$web3auth;
@@ -117,13 +117,13 @@ export default {
         }
     }
     &__drop {
-       & button {
-           background-color: #8247E5;
-           color: white;
-           width: 14rem;
-           height: 3.5rem;
-           border-radius: .3rem;
-       } 
+        & button {
+            background-color: #8247e5;
+            color: white;
+            width: 14rem;
+            height: 3.5rem;
+            border-radius: 0.3rem;
+        }
     }
     &__submit {
         & input {
@@ -147,7 +147,8 @@ export default {
         border-bottom: 1px solid gray;
     }
 }
-.dz-message, .dz-preview {
+.dz-message,
+.dz-preview {
     display: none !important;
 }
 </style>
