@@ -2,7 +2,7 @@
     <section class="index container">
         <header class="index__header p-20 pb-100">
             <h1 class="medium">Verify-Me</h1>
-            <p class="primaryc pb-30 pt-10">Intellectual property management ecosystem in 3 easy steps</p>
+            <p class="primaryc pb-30 pt-10">Intellectual property management using the VerifyMe cosystem in 3 easy steps</p>
             <em
                 >We know that artists and authors usually want to focus on the actual craft or research, so we empower all kinds of creators to concetrate on their creative processes and let the smart
                 contracts take care of their intellectual property.

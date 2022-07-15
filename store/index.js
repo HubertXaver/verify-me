@@ -19,6 +19,7 @@ export default {
         }
     },
     actions: {
+        // Initiate
         async startup({ state, commit, dispatch, getters }, web3auth) {
             await web3auth.initModal();
             web3auth.on(ADAPTER_STATUS.CONNECTED, async (data) => {
@@ -45,7 +46,7 @@ export default {
                 console.log('errored', error);
             });
             web3auth.on(LOGIN_MODAL_EVENTS.MODAL_VISIBILITY, (isVisible) => {
-                console.log('HERE', isVisible);
+                console.log('login modal visible', isVisible);
             });
         },
         async logout({ state, commit }) {
@@ -61,7 +62,7 @@ export default {
             const v = parseInt(signature.slice(130, 132), 16);
 
             const factory = new ContractFactory(intellectual.abi, intellectual.byteCode, getters.provider.getSigner());
-            console.log(factory, signature.slice(130, 132), v, r ,s);
+            console.log(factory, signature.slice(130, 132), v, r, s);
             try {
                 const contract = await factory.deploy(name, symbol, v, r, s);
                 console.log(contract.address);
@@ -71,6 +72,7 @@ export default {
             }
         }
     },
+    // Initiate Mutations
     mutations: {
         SET_USER: (state, keys) => {
             Object.keys(state).forEach((k) => {
