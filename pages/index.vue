@@ -17,7 +17,7 @@
             <form class="d-flex-col px-40 pt-60" @submit.prevent="createIP({ hash, name, symbol })">
                 <input placeholder="Enter the name of your IP, ex: “unicorn drawing”" required class="mb-33" v-model="name" type="text" />
                 <input placeholder="Enter a symbol, ex: “s2!”" required class="mb-24" v-model="symbol" type="text" />
-                <button class="primarybg">Submit</button>
+                <button class="primarybg">Submit to Verify-Me</button>
             </form>
         </div>
         <div class="p-20 pb-100">
@@ -27,17 +27,17 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import SparkMD5 from 'spark-md5';
+import { mapActions } from "vuex";
+import SparkMD5 from "spark-md5";
 
 export default {
     data() {
         return {
-            name: '',
-            symbol: '',
+            name: "",
+            symbol: "",
             hash: null,
             options: {
-                url: 'http://httpbin.org/anything'
+                url: "http://httpbin.org/anything"
             }
         };
     },
@@ -92,13 +92,13 @@ export default {
                 });
                 this.hash = hash;
             } catch (e) {
-                alert('something went wrong');
+                alert("something went wrong");
             }
         },
         ...mapActions({
-            logout: 'logout',
-            createIP: 'createIP',
-            signFile: 'signFile'
+            logout: "logout",
+            createIP: "createIP",
+            signFile: "signFile"
         })
     }
 };
